@@ -14,13 +14,29 @@ User.destroy_all
 
 puts 'Creating users...'
 
-100.times do
-  User.create!(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    email: Faker::Internet.email,
+
+  charles = User.create!(
+    first_name: "charles",
+    last_name: "noppe",
+    email: "charles@gmail.com",
+    password: "password1",
   )
-end
+
+  margaux = User.create!(
+    first_name: "margaux",
+    last_name: "feslard",
+    email: "margaux@gmail.com",
+    password: "password1",
+  )
+
+  marie = User.create!(
+    first_name: "marie",
+    last_name: "caulliez",
+    email: "marie@gmail.com",
+    password: "password1",
+  )
+
+  
 
 
 puts 'Creating pools...'
@@ -35,7 +51,7 @@ users.each do |u|
       description: Faker::Restaurant.description,
       price_per_day: rand(100..200),
       capacity: rand(2..30),
-      pictures: "https://source.unsplash.com/1600x900/?swimmingpool",
+      picture: "https://source.unsplash.com/1600x900/?swimmingpool",
       user: u,
       )
   end
@@ -43,7 +59,7 @@ users.each do |u|
 
 
   puts 'Creating rentals...'
-  200.times do
+  2.times do
   Rental.create!(
     date: Faker::Date.forward(150),
     comment: Faker::Verb.past,
