@@ -5,3 +5,68 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts 'Cleaning database...'
+Rental.destroy_all
+Pool.destroy_all
+User.destroy_all
+
+
+puts 'Creating users...'
+
+
+  charles = User.create!(
+    first_name: "charles",
+    last_name: "noppe",
+    email: "charles@gmail.com",
+    password: "password1",
+  )
+
+  margaux = User.create!(
+    first_name: "margaux",
+    last_name: "feslard",
+    email: "margaux@gmail.com",
+    password: "password1",
+  )
+
+  marie = User.create!(
+    first_name: "marie",
+    last_name: "caulliez",
+    email: "marie@gmail.com",
+    password: "password1",
+  )
+
+  
+
+
+puts 'Creating pools...'
+
+users = User.all
+
+users.each do |u|
+  2.times do 
+  Pool.create!(
+      name: Faker::Restaurant.name ,
+      address: Faker::Address.city,
+      description: Faker::Restaurant.description,
+      price_per_day: rand(100..200),
+      capacity: rand(2..30),
+      picture: "https://source.unsplash.com/1600x900/?swimmingpool",
+      user: u,
+      )
+  end
+  end
+
+
+  puts 'Creating rentals...'
+  2.times do
+  Rental.create!(
+    date: Faker::Date.forward(150),
+    comment: Faker::Verb.past,
+    pool: Pool.find(Pool.ids.sample),
+    user: User.find(User.ids.sample),
+    )
+  end
+
+
+

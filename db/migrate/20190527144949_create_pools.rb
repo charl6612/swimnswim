@@ -5,7 +5,7 @@ class CreatePools < ActiveRecord::Migration[5.2]
       t.text :description
       t.integer :price_per_day
       t.integer :capacity
-      t.string :pictures
+      t.string :picture
       t.references :user, foreign_key: true
 
       t.timestamps
