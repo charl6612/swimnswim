@@ -1,8 +1,8 @@
-class CreateRentals < ActiveRecord::Migration[5.2]
+class CreateReviews < ActiveRecord::Migration[5.2]
   def change
-    create_table :rentals do |t|
-      t.date :date
-      t.text :comment
+    create_table :reviews do |t|
+      t.text :description
+      t.integer :rating
       t.references :pool, foreign_key: true
       t.references :user, foreign_key: true
 
