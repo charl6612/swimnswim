@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_27_144949) do
+ActiveRecord::Schema.define(version: 2019_05_27_145227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,18 @@ ActiveRecord::Schema.define(version: 2019_05_27_144949) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_pools_on_user_id"
+  end
+
+  create_table "rentals", force: :cascade do |t|
+    t.date "date"
+    t.integer "user_number"
+    t.text "comment"
+    t.bigint "pool_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pool_id"], name: "index_rentals_on_pool_id"
+    t.index ["user_id"], name: "index_rentals_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,4 +54,6 @@ ActiveRecord::Schema.define(version: 2019_05_27_144949) do
   end
 
   add_foreign_key "pools", "users"
+  add_foreign_key "rentals", "pools"
+  add_foreign_key "rentals", "users"
 end
