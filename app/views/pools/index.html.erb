@@ -1,2 +1,9 @@
 <h1>Pools#index</h1>
-<p>Find me in app/views/pools/index.html.erb</p>
+
+<div class="container">
+  <div class="card-grid">
+    <% @pools.each do |pool| %>
+    <%= render 'shared/poolcard' pool: pool %>
+    <% end %>
+  </div>
+</div>

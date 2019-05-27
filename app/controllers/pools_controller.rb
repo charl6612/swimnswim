@@ -3,6 +3,7 @@ class PoolsController < ApplicationController
   end
 
   def index
+    @pools = Pool.all
   end
 
   def new
