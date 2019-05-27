@@ -51,7 +51,6 @@ users.each do |u|
       description: Faker::Restaurant.description,
       price_per_day: rand(100..200),
       capacity: rand(2..30),
-      picture: "https://source.unsplash.com/1600x900/?swimmingpool",
       user: u,
       )
   end
