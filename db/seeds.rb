@@ -36,36 +36,34 @@ puts 'Creating users...'
     password: "password1",
   )
 
-  
-
 
 puts 'Creating pools...'
 
-users = User.all
-
-users.each do |u|
+User.all.each do |u|
   2.times do 
-  Pool.create!(
+    pool = Pool.new(
       name: Faker::Restaurant.name ,
       address: Faker::Address.city,
       description: Faker::Restaurant.description,
       price_per_day: rand(100..200),
       capacity: rand(2..30),
       user: u,
-      )
-  end
-  end
-
-
-  puts 'Creating rentals...'
-  2.times do
-  Rental.create!(
-    date: Faker::Date.forward(150),
-    comment: Faker::Verb.past,
-    pool: Pool.find(Pool.ids.sample),
-    user: User.find(User.ids.sample),
     )
+    pool.remote_picture_url = "http://referentiel.nouvelobs.com/file/15104197.png"
+    pool.save
   end
+end
+
+
+puts 'Creating rentals...'
+2.times do
+Rental.create!(
+  date: Faker::Date.forward(150),
+  comment: Faker::Verb.past,
+  pool: Pool.find(Pool.ids.sample),
+  user: User.find(User.ids.sample),
+  )
+end
 
 
 
