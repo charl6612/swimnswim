@@ -4,11 +4,12 @@
   height:100vh;
   background-position: center;
   padding: 150px 0;
-  top: 0;
-  position: relative;
+  position:absolute;
+  top:0;
+  width:100%;
 }
 
-.form-group {
+.form-group.home{
   opacity: 0.8;
   margin-top: 30vh;
   transform: translateY(-50%);
@@ -17,7 +18,6 @@
   width:50%;
 }
 
-.navbar-default {
-  background-color: transparent;
-  border: none;
+.form-group input {
+  border-radius: 10px;
 }
