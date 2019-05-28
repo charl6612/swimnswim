@@ -27,12 +27,18 @@
     </div>
     <div class="card-body">
       <%= link_to "Demande de réservation", new_pool_rental_path(@pool), class: 'btn btn-primary'  %>
+      <% if policy(@pool).edit? %>
       <%= link_to "Editer", edit_pool_path, class: "btn btn-warning" %>
-      <%= link_to pool_path, 
-    method: :delete,
-    data: { confirm: "Are you sure?" }, class: 'btn btn-danger'  do %>
-      Delete
+      <% end %>
+      <% if policy(@pool).destroy? %>
+      <%= link_to pool_path,
+      method: :delete,
+      data: { confirm: "Are you sure?" }, class: 'btn btn-danger'  do %>
+       Delete
+        <% end %>
       <% end %>
     </div>
   </div>
 </div>
+
+

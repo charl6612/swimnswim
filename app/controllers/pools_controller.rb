@@ -1,23 +1,24 @@
 class PoolsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @pools = Pool.all
+    @pools = policy_scope(Pool)
   end
 
   def show
     @pool = Pool.find(params[:id])
+    authorize @pool
   end
 
   def new
     @pool = Pool.new
-
+    authorize @pool
   end
 
   def create        # POST /pools
     @pool = Pool.new(pool_params)
+    authorize @pool
     @pool.user = current_user
     if @pool.save
- 
       redirect_to pool_path(@pool)
     else
       render :new
@@ -26,16 +27,19 @@ class PoolsController < ApplicationController
 
   def edit          # GET /articles/:id/edit
     @pool = Pool.find(params[:id])
+    authorize @pool
   end
 
   def update
     @pool = Pool.find(params[:id])
+    authorize @pool
     @pool.update(pool_params)
     redirect_to pool_path(@pool)
   end
 
   def destroy
     @pool = Pool.find(params[:id])
+    authorize @pool
     @pool.destroy
     redirect_to pools_path
   end
