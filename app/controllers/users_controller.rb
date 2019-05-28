@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def dashboard
-    authorize @user
+    @user_pools = Pool.find(current_user.pool_ids)
+    authorize @current_user
   end
 
   def edit

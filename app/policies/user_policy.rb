@@ -6,7 +6,7 @@ class UserPolicy < ApplicationPolicy
   end
 
   def dashboard?
-    true
+   true
   end
 
   def edit?
