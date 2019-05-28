@@ -1,11 +1,19 @@
+<div class="container">
 <h1>Pools</h1>
 <h2><%= @pools.count %> piscines trouvées !</h2>
 
+  <div class="content">
 
-<div class="container">
-  <div class="card-grid">
-    <% @pools.each do |pool| %>
-    <%= render 'shared/poolcard', pool: pool %>
-    <% end %>
+    <div class="card-grid">
+      <% @pools.each do |pool| %>
+      <%= render 'shared/poolcard', pool: pool %>
+      <% end %>
+    </div>
+
+    </div>
+      <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoibWFyaWVqampqaiIsImEiOiJjanZpMmZwazMwMWlqM3pwajRyZjM1YnVuIn0.IyXk4GZaA2d1NcGxUyjsbQ'>
   </div>
+
+  </div>
+
 </div>

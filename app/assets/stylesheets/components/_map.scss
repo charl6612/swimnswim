@@ -1,0 +1,36 @@
+.content {
+  display: flex;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .card-pool {
+    grid-template-columns: 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .card-pool {
+    grid-template-columns: 1fr 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-pool {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #map {
+    display: block;
+  }
+}
