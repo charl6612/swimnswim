@@ -1,6 +1,2 @@
-//
-//*= require mapbox-gl
+//= require rails-ujs
 //= require_tree .
-
-//*= require mapbox-gl-geocoder
-// ...

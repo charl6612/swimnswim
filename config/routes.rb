@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, sign_out_via: [:delete, :get]
+  devise_for :users
   root to: "pages#home"
   get 'users/dashboard'
   get 'users/edit'
