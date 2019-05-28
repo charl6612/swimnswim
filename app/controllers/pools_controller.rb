@@ -9,11 +9,14 @@ class PoolsController < ApplicationController
 
   def new
     @pool = Pool.new
+
   end
 
   def create        # POST /pools
     @pool = Pool.new(pool_params)
+    @pool.user = current_user
     if @pool.save
+ 
       redirect_to pool_path(@pool)
     else
       render :new
@@ -37,6 +40,18 @@ class PoolsController < ApplicationController
   end
 
   def pool_params
-    params.require(:pool).permit(:name, :address, :description, :price_per_day, :capacity, :pictures)
+    params.require(:pool).permit(:name, :address, :description, :price_per_day, :capacity, :picture)
   end
 end
+
+
+# t.string "address"
+# t.text "description"
+# t.integer "price_per_day"
+# t.integer "capacity"
+# t.string "picture"
+# t.bigint "user_id"
+# t.datetime "created_at", null: false
+# t.datetime "updated_at", null: false
+# t.string "name"
+# t.index ["user_id"], name: "index_pools_on_user_id"
