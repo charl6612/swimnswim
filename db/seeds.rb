@@ -40,7 +40,7 @@ puts 'Creating users...'
 puts 'Creating pools...'
 
 User.all.each do |u|
-  2.times do 
+  5.times do 
     pool = Pool.new(
       name: Faker::Restaurant.name ,
       address: Faker::Address.city,
@@ -56,7 +56,7 @@ end
 
 
 puts 'Creating rentals...'
-2.times do
+3.times do
 Rental.create!(
   date: Faker::Date.forward(150),
   comment: Faker::Verb.past,
