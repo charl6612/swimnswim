@@ -5,27 +5,29 @@
     <%= cl_image_tag @pool.picture%>
   </div>
   <div class="small-picture">
-     <%= cl_image_tag @pool.picture %>
-     <%= cl_image_tag @pool.picture %>
+    <%= cl_image_tag @pool.picture %>
+    <%= cl_image_tag @pool.picture %>
   </div>
-   <div class="small-picture">
-     <%= cl_image_tag @pool.picture %>
-     <%= cl_image_tag @pool.picture %>
+  <div class="small-picture">
+    <%= cl_image_tag @pool.picture %>
+    <%= cl_image_tag @pool.picture %>
   </div>
   <button type="button" class="btn btn-light">Voir les photos</button>
 </div>
-  <div class="container">
+<div class="container">
+  <div class="d-flex justify-content-between">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title"><%= @pool.name %></h5>
         <h6 class="card-subtitle mb-2 text-muted"><%= @pool.address  %></h6>
-         <h6 class="card-subtitle mb-2 text-muted">Capacité <%= @pool.capacity %> personnes</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Capacité <%= @pool.capacity %> personnes</h6>
         <p class="card-text">
-        <%= @pool.description %></p>
+          <%= @pool.description %></p>
       </div>
     </div>
-
-
-
-
+    <div class="card-body">
+      <%= link_to "Demande de réservation", new_pool_rental_path(@pool), class: 'btn btn-primary'  %>
+    </div>
   </div>
+
+</div>
