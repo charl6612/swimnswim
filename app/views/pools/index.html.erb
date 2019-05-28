@@ -1,6 +1,8 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/flashes' %>
 
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+
 <div class="container">
 
 <br>
@@ -10,7 +12,9 @@
             <%= render 'shared/poolcard', pool: pool %>
       <% end %>
     </div>
-</a>
-  </div>
+
+<div id="map" style="height: 300px; width: 600px"></div>
+
+    <script src="main.js"></script>
 
 </div>
