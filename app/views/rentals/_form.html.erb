@@ -1,0 +1,7 @@
+<%= simple_form_for [@pool, @rental] do |f| %>
+  <%= f.input :date %>
+  <%= f.input :comment %>
+  <%= f.input :user_number %>
+  <%= f.submit "add a rental", class: "btn btn-primary" %>
+  <%= link_to "Back to Pool", pool_path(@pool), class: "btn btn-secondary" %>
+<% end %>
