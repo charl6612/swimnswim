@@ -17,8 +17,8 @@ class PoolsController < ApplicationController
   def create      
       # POST /pools
     @pool = Pool.new(pool_params)
-    authorize @pool
     @pool.user = current_user
+    authorize @pool
     if @pool.save
       redirect_to pool_path(@pool)
     else
@@ -49,7 +49,6 @@ class PoolsController < ApplicationController
     params.require(:pool).permit(:name, :address, :description, :price_per_day, :capacity, :picture)
   end
 end
-
 
 # t.string "address"
 # t.text "description"
