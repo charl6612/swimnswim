@@ -2,18 +2,19 @@
 
 <%= render 'shared/navbar' %>
 <%= render 'shared/flashes' %>
-
-<h1>Pools</h1>
-<h2><%= @pools.count %> piscines trouvées !</h2>
-
-  <div class="content">
-
+<br>
+<h4><%= @pools.count %> piscines correspondent à votre recherche !</h4>
+<a href="pools">
     <div class="card-grid">
       <% @pools.each do |pool| %>
       <%= render 'shared/poolcard', pool: pool %>
       <% end %>
     </div>
-
+</a>
   </div>
 
 </div>
+
+
+
+

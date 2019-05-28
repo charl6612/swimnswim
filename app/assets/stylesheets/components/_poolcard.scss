@@ -2,6 +2,29 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 300px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.card-pool:hover {
+  transform: scale(1.03);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a h2 {
+  color: black;
+}
+
+a p {
+  color: $gray;
 }
 
 .card-pool > img {
@@ -43,3 +66,4 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
