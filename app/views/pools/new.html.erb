@@ -8,6 +8,7 @@
   <%= f.input :price_per_day %>
   <%= f.input :capacity %>
   <%= f.input :picture %>
+  <%= f.input :picture_cache, as: :hidden %>
   <%= f.submit "add a pool", class: "btn btn-primary" %>
   <%= link_to "Back to list", pools_path, class: "btn btn-secondary" %>
 <% end %>
