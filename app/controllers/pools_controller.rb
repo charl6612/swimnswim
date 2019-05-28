@@ -14,7 +14,8 @@ class PoolsController < ApplicationController
     authorize @pool
   end
 
-  def create        # POST /pools
+  def create      
+      # POST /pools
     @pool = Pool.new(pool_params)
     authorize @pool
     @pool.user = current_user

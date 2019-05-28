@@ -1,14 +1,14 @@
-.navbar-lewagon {
+.navbar-lewagon-defaut {
   justify-content: space-between;
-  background: white;
+  background: $light-gray;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   transition: 0.2s;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-lewagon-defaut .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-lewagon-defaut .navbar-brand img {
   width: 40px;
 }
