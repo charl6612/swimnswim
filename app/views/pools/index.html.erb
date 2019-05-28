@@ -4,7 +4,7 @@
 <%= render 'shared/flashes' %>
 <br>
 <h4><%= @pools.count %> piscines correspondent à votre recherche !</h4>
-<a href="pools">
+<a href="">
     <div class="card-grid">
       <% @pools.each do |pool| %>
       <%= render 'shared/poolcard', pool: pool %>
