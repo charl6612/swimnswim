@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'users/dashboard'
   get 'users/edit'
   get 'users/update'
- resources :pools do
+  resources :pools do
   resources :rentals, only: [ :index, :new, :create ]
   end
 
