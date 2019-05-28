@@ -1,0 +1,23 @@
+.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),asset-url('banner_pictures.jpg');
+  background-size: cover;
+  height:100vh;
+  background-position: center;
+  padding: 150px 0;
+  top: 0;
+  position: relative;
+}
+
+.form-group {
+  opacity: 0.8;
+  margin-top: 30vh;
+  transform: translateY(-50%);
+  margin-left: auto;
+  margin-right: auto;
+  width:50%;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border: none;
+}
