@@ -1,4 +1,34 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/flashes' %>
-<h1>Pools#show</h1>
-<p>Find me in app/views/pools/show.html.erb</p>
+
+<div class="pictures-display">
+  <div class="big-picture">
+    <%= cl_image_tag @pool.picture%>
+  </div>
+  <div class="small-picture">
+     <%= cl_image_tag @pool.picture %>
+     <%= cl_image_tag @pool.picture %>
+  </div>
+   <div class="small-picture">
+     <%= cl_image_tag @pool.picture %>
+     <%= cl_image_tag @pool.picture %>
+  </div>
+  <button type="button" class="btn btn-light">Voir les photos</button>
+</div>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= @pool.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= @pool.address  %></h6>
+         <h6 class="card-subtitle mb-2 text-muted">Capacité <%= @pool.capacity %> personnes</h6>
+        <p class="card-text">
+        <%= @pool.description %></p>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
