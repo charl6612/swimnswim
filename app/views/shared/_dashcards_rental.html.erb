@@ -1,0 +1,12 @@
+<%= link_to users_dashboard_rental_path(rental) do %>
+  <div class="card-product">
+    <%= cl_image_tag rental.pool.picture %>
+    <div class="card-product-infos">
+      <h2><%= rental.pool.name %></h2>
+      <p><%=rental.date%></p>
+      <p><%=rental.user_number%> personnes</p>
+      <p><%=rental.pool.price_per_day%>€ / jour</p>
+    </div>
+  </div>
+<% end %>
+

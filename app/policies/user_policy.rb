@@ -5,7 +5,11 @@ class UserPolicy < ApplicationPolicy
     end
   end
 
-  def dashboard?
+  def dashboard_pool?
+   true
+  end
+
+  def dashboard_rental?
    true
   end
 
