@@ -1,0 +1,15 @@
+<%= render 'shared/navbar' %>
+<%= render 'shared/flashes' %>
+<%= render 'shared/tabs', active: 2 %>
+
+<div class="container dashboard-pool">
+    <% @user_rentals.each do |rental| %>
+      <div class="mes-piscines">
+        <div class="cards-product-dash">
+        <%= render 'shared/dashcards_rental', rental: rental %>
+        </div>
+      </div>
+    <% end %>
+</div>
+
+
