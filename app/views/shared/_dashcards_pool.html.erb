@@ -1,0 +1,14 @@
+<%= link_to users_dashboard_pool_path(pool) do %>
+  <div class="card-product">
+    <%= cl_image_tag pool.picture %>
+    <div class="card-product-infos">
+      <h2><%= pool.name %></h2>
+      <p><%=pool.address%></p>
+      <p><%=pool.description%></p>
+    </div>
+  </div>
+<% end %>
+
+
+
+
