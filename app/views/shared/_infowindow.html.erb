@@ -1,0 +1,14 @@
+<%= link_to pool_path(pool) do %>
+<div class="infowindow-card-pool">
+<%= cl_image_tag pool.picture %>
+  <div class="infowindow-card-pool-infos">
+    <div>
+      <h2><%= pool.name %></h2>
+      <p><%=pool.address%></p>
+    </div>
+    <h2 class="infowindow-card-trip-pricing"><%=pool.price_per_day%>€/jour</h2>
+  </div>
+
+
+</div>
+<% end %>
