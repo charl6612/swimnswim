@@ -1,7 +1,11 @@
 class PoolsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @pools = policy_scope(Pool)
+    if params[:query].present?
+      @pools = policy_scope(Pool.where('address ILIKE ?', "%#{params[:query]}%"))
+    else
+      @pools = policy_scope(Pool)
+    end
 
     @pools_markers = Pool.where.not(latitude: nil, longitude: nil)
 
@@ -12,6 +16,7 @@ class PoolsController < ApplicationController
         infoWindow: render_to_string(partial: "shared/infowindow", locals: { pool: pool }),
       }
     end
+
   end
 
   def show
