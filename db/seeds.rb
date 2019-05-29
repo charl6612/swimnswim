@@ -42,8 +42,8 @@ puts 'Creating pools...'
 User.all.each do |u|
   5.times do 
     pool = Pool.new(
-      name: Faker::Restaurant.name ,
-      address: Faker::Address.city,
+      name: Faker::Restaurant.name,
+      address: ["9 rue du chemin vert, 59960 Neuville en ferrain", "124 avenue Becquart, 59130 Lambersart"].sample,
       description: Faker::Restaurant.description,
       price_per_day: rand(100..200),
       capacity: rand(2..30),

@@ -2,11 +2,15 @@
 <%= render 'shared/flashes' %>
 
 <div class="container">
-
-<br>
   <h4><%= @pools.count %> piscines correspondent à votre recherche !</h4>
-    <div class="card-grid">
-      <% @pools.each do |pool| %>
-            <%= render 'shared/poolcard', pool: pool %>
-      <% end %>
-    </div>
+</div>
+<div class="index-split">
+  <div class="cards">
+    <% @pools.each do |pool| %>
+    <%= render 'shared/poolcard', pool: pool %>
+    <% end %>
+  </div>
+  <div class="index-map">
+    <%= render 'shared/map'%>
+  </div>
+</div>
