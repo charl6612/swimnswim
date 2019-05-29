@@ -14,7 +14,6 @@ User.destroy_all
 
 puts 'Creating users...'
 
-
   charles = User.create!(
     first_name: "charles",
     last_name: "noppe",
@@ -65,5 +64,12 @@ Rental.create!(
   )
 end
 
-
-
+puts 'Creating reviews...'
+3.times do
+Review.create!(
+  description: Faker::Restaurant.review,
+  rating: rand(0..5),
+  pool: Pool.find(Pool.ids.sample),
+  user: User.find(User.ids.sample),
+  )
+end

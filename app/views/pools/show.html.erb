@@ -1,5 +1,6 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/flashes' %>
+
 <div class="pictures-display">
   <div class="big-picture">
     <%= cl_image_tag @pool.picture%>
@@ -14,31 +15,48 @@
   </div>
   <button type="button" class="btn btn-light">Voir les photos</button>
 </div>
+
 <div class="container">
-  <div class="d-flex justify-content-between">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"><%= @pool.name %></h5>
-        <h6 class="card-subtitle mb-2 text-muted"><%= @pool.address  %></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Capacité <%= @pool.capacity %> personnes</h6>
-        <p class="card-text">
-          <%= @pool.description %></p>
+  <div class="row">
+
+    <!-- <div class="d-flex justify-content-between"> -->
+
+      <div class="col-sm-12 col-md-7">
+        <div class="card-body bg-white mt-4">
+          <h5 class="card-title"><%= @pool.name %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= @pool.address  %></h6>
+          <h6 class="card-subtitle mb-2 text-muted">Capacité <%= @pool.capacity %> personnes</h6>
+          <p class="card-text">
+            <%= @pool.description %></p>
+        </div>
       </div>
-    </div>
-    <div class="card-body">
-      <%= link_to "Demande de réservation", new_pool_rental_path(@pool), class: 'btn btn-primary'  %>
-      <% if policy(@pool).edit? %>
-      <%= link_to "Editer", edit_pool_path, class: "btn btn-warning" %>
-      <% end %>
-      <% if policy(@pool).destroy? %>
-        <%= link_to pool_path,
-          method: :delete,
-          data: { confirm: "Are you sure?" }, class: 'btn btn-danger'  do %>
-          Delete
-        <% end %>
-      <% end %>
-      <%= link_to "Retour liste", pools_path, class: 'btn btn-primary'  %>
-    </div>
+
+      <div class="col-sm-12 col-md-5 text-justify">
+
+        <div class="card-body">
+          <%= link_to "Demande de réservation", new_pool_rental_path(@pool), class: 'btn btn-primary'  %>
+          <% if policy(@pool).edit? %>
+          <%= link_to "Editer", edit_pool_path, class: "btn btn-warning" %>
+          <% end %>
+          <% if policy(@pool).destroy? %>
+            <%= link_to pool_path,
+              method: :delete,
+              data: { confirm: "Are you sure?" }, class: 'btn btn-danger'  do %>
+              Delete
+            <% end %>
+          <% end %>
+          <% if policy(@pool).show? %>
+            <%= link_to "Ajouter un commentaire", new_pool_review_path(@pool) %>
+          <% end %>
+        </div>
+
+        <div>
+            <% @reviews.each do |review| %>
+              <%= render 'shared/reviewcard', review: review%>
+            <% end %>
+        </div>
+
+      </div>
   </div>
 </div>
 
