@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   get 'users/edit'
   get 'users/update'
   resources :pools do
-  resources :rentals, only: [ :index, :new, :create ]
+    resources :rentals, only: [ :index, :new, :create ]
+    resources :reviews, only: [:new, :create]
   end
-
+  resources :reviews, only: [:show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,0 +1,7 @@
+<div class="container">
+  <%= simple_form_for [@pool, @review] do |f| %>
+    <%= f.input :description %>
+    <%= f.input :rating, collection: (0..5) %>
+    <%= f.submit "Ajouter un commentaire", class: "btn btn-primary" %>
+  <% end %>
+</div>

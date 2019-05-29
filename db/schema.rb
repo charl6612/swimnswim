@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_27_151245) do
+ActiveRecord::Schema.define(version: 2019_05_29_095512) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,11 +20,11 @@ ActiveRecord::Schema.define(version: 2019_05_27_151245) do
     t.text "description"
     t.integer "price_per_day"
     t.integer "capacity"
-    t.string "picture"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.string "picture"
     t.index ["user_id"], name: "index_pools_on_user_id"
   end
 
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2019_05_27_151245) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

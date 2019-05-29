@@ -14,7 +14,6 @@ User.destroy_all
 
 puts 'Creating users...'
 
-
   charles = User.create!(
     first_name: "charles",
     last_name: "noppe",
@@ -40,7 +39,7 @@ puts 'Creating users...'
 puts 'Creating pools...'
 
 User.all.each do |u|
-  5.times do 
+  5.times do
     pool = Pool.new(
       name: Faker::Restaurant.name ,
       address: Faker::Address.city,
@@ -65,5 +64,12 @@ Rental.create!(
   )
 end
 
-
-
+puts 'Creating reviews...'
+3.times do
+Review.create!(
+  description: Faker::Restaurant.review,
+  rating: rand(0..5),
+  pool: Pool.find(Pool.ids.sample),
+  user: User.find(User.ids.sample),
+  )
+end

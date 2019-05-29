@@ -6,6 +6,7 @@ class PoolsController < ApplicationController
 
   def show
     @pool = Pool.find(params[:id])
+    @reviews = @pool.reviews
     authorize @pool
   end
 
@@ -14,8 +15,8 @@ class PoolsController < ApplicationController
     authorize @pool
   end
 
-  def create      
-      # POST /pools
+  def create
+    # POST /pools
     @pool = Pool.new(pool_params)
     @pool.user = current_user
     authorize @pool
