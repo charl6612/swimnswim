@@ -1,0 +1,11 @@
+<ul class="list-inline tabs-underlined">
+  <li>
+    <%= link_to "Mes piscines", users_dashboard_pool_path, class: "tab-underlined #{active == 1 ? "active" : ""}" %>
+  </li>
+  <li>
+    <%= link_to "Mes réservations", users_dashboard_rental_path, class: "tab-underlined #{active == 2 ? "active" : ""}" %>
+  </li>
+  <li>
+    <%= link_to "Mon profil", users_edit_path, class: "tab-underlined #{active == 3 ? "active" : ""}" %>
+  </li>
+</ul>

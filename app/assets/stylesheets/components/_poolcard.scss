@@ -1,3 +1,17 @@
+a {
+  text-decoration: none;
+  &:hover {
+    transition: 0.2;
+    text-decoration: none;
+  }
+  h2 {
+    color: black;
+  }
+  p {
+    color: $gray;
+  }
+}
+
 .card-pool {
   overflow: hidden;
   background: white;
@@ -5,65 +19,90 @@
   width: 300px;
   margin-bottom: 20px;
   border-radius: 5px;
+  height: 300px;
+  &:hover{
+    transition: 0.2;
+    transform: scale(1.03);
+  }
+  p {
+    font-size: 12px;
+    opacity: .7;
+    margin: 0;
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  >img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+
 }
 
-.card-pool:hover {
-  transform: scale(1.03);
+.index-split{
+  display:flex;
+  justify-content: space-between;
+  margin : 10px;
 }
 
-a {
-  text-decoration: none;
+.cards {
+  display: grid;
+  grid-gap: 16px;
+  flex-grow: 1;
 }
 
-a:hover {
-  text-decoration: none;
-}
-
-a h2 {
-  color: black;
-}
-
-a p {
-  color: $gray;
-}
-
-.card-pool > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.card-pool h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-pool p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-
-.card-pool .card-pool-infos {
+.card-pool-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+
+  .card-pool-user {
+    position: absolute;
+    right: 16px;
+    top: -20px;
+    width: 40px;
+  }
 }
 
-.card-pool-infos .card-pool-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .index-map{
+    width: 0;
+  }
 }
 
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
 
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}

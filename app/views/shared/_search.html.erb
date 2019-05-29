@@ -1,0 +1,9 @@
+      <div class="form-group <%= current_page?(root_path) ? "home" : "defaut" %>">
+        <%= form_tag pools_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Ville"
+        %>
+        <% end %>
+      </div>

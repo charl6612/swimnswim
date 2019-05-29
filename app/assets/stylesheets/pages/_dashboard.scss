@@ -1,0 +1,19 @@
+.mes-piscines{
+  display:flex;
+  position:relative;
+}
+
+.cards-product-dash{
+  flex-grow: 1;
+}
+
+.button-dash{
+  position:absolute;
+  top: 50%;
+  right : 10px;
+}
+
+.container.dashboard-pool{
+  width: 50%;
+  margin-top: 30px;
+}

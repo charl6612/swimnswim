@@ -1,7 +1,22 @@
 class PoolsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @pools = policy_scope(Pool)
+    if params[:query].present?
+      @pools = policy_scope(Pool.where('address ILIKE ?', "%#{params[:query]}%"))
+    else
+      @pools = policy_scope(Pool)
+    end
+
+    @pools_markers = Pool.where.not(latitude: nil, longitude: nil)
+
+    @markers = @pools_markers.map do |pool|
+      {
+        lat: pool.latitude,
+        lng: pool.longitude,
+        infoWindow: render_to_string(partial: "shared/infowindow", locals: { pool: pool }),
+      }
+    end
+
   end
 
   def show
@@ -50,14 +65,3 @@ class PoolsController < ApplicationController
     params.require(:pool).permit(:name, :address, :description, :price_per_day, :capacity, :picture)
   end
 end
-
-# t.string "address"
-# t.text "description"
-# t.integer "price_per_day"
-# t.integer "capacity"
-# t.string "picture"
-# t.bigint "user_id"
-# t.datetime "created_at", null: false
-# t.datetime "updated_at", null: false
-# t.string "name"
-# t.index ["user_id"], name: "index_pools_on_user_id"

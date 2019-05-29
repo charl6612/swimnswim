@@ -1,0 +1,19 @@
+<%= render 'shared/navbar' %>
+<%= render 'shared/flashes' %>
+<%= render 'shared/tabs', active: 1 %>
+
+<div class="container dashboard-pool">
+    <% @user_pools.each do |pool| %>
+      <div class="mes-piscines">
+        <div class="cards-product-dash">
+        <%= render 'shared/dashcards_pool', pool: pool %>
+        </div>
+        <div class="button-dash">
+          <%= link_to "Editer", edit_pool_path(pool), class: "btn btn-light" %>
+          <%= link_to 'Supprimer', pool, class: "btn btn-light",  method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    <% end %>
+</div>
+
+

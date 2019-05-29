@@ -1,0 +1,23 @@
+.infowindow-card-pool{
+  img{
+    height:auto;
+    width: 100%;
+    object-fit: cover;
+  } 
+  h2 {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+  }
+  p {
+    font-size: 8px;
+    opacity: .7;
+    margin: 0;
+  } 
+
+}
+
+.infowindow-card-pool-infos {
+  padding: 12px;
+  position: relative;
+}
