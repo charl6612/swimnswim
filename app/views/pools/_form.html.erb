@@ -8,6 +8,11 @@
     <%= f.input :capacity, class:"form-control", placeholder:"Nombre de personnes max"%>
     <%= f.input :picture, as: :file %>
     <%= f.input :picture_cache, as: :hidden %>
+    <%= f.input :picture1, as: :file %>
+    <%= f.input :picture1_cache, as: :hidden %>
+    <%= f.input :picture2, as: :file %>
+    <%= f.input :picture2_cache, as: :hidden %>
+
     <% if pool.id.nil? %>
         <%= f.submit "Ajouter une piscine", class: "btn btn-primary" %>
     <% else %>

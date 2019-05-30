@@ -22,6 +22,7 @@ class PoolsController < ApplicationController
   def show
     @pool = Pool.find(params[:id])
     @reviews = @pool.reviews
+    @rental = Rental.new
     authorize @pool
   end
 
@@ -62,6 +63,6 @@ class PoolsController < ApplicationController
   end
 
   def pool_params
-    params.require(:pool).permit(:name, :address, :description, :price_per_day, :capacity, :picture)
+    params.require(:pool).permit(:name, :address, :description, :price_per_day, :capacity, :picture, :picture1, :picture2)
   end
 end

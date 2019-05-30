@@ -1,0 +1,20 @@
+.pictures-display {
+  display:flex;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height : 350px;
+  flex-grow:1;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.picture-pool{
+margin: 1px;
+}
+
+.picture-pool img{
+ width : 100%;
+ height: 100%;
+ object-fit: cover;
+ border-radius: 5px;
+}
