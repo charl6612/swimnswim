@@ -1,15 +1,17 @@
 class PoolsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: %i[index show]
+    
   def index
     if params[:query].present?
-      @pools = policy_scope(Pool.where('address ILIKE ?', "%#{params[:query]}%"))
-    else
-      @pools = policy_scope(Pool)
+      @pools = policy_scope(Pool.near("%#{params[:query]}%", 10)) 
+      if @pools.empty?
+        @pools = policy_scope(Pool)
+      else
+        @pools = policy_scope(Pool.near("%#{params[:query]}%", 10))
+     end
     end
 
-    @pools_markers = @pools.where.not(latitude: nil, longitude: nil)
-
-    @markers = @pools_markers.map do |pool|
+    @markers = @pools.where.not(latitude: nil, longitude: nil).map do |pool|
       {
         lat: pool.latitude,
         lng: pool.longitude,
@@ -43,7 +45,7 @@ class PoolsController < ApplicationController
     end
   end
 
-  def edit          # GET /articles/:id/edit
+  def edit # GET /articles/:id/edit
     @pool = Pool.find(params[:id])
     authorize @pool
   end
