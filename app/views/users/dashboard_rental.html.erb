@@ -8,6 +8,7 @@
         <div class="cards-product-dash">
         <%= render 'shared/dashcards_rental', rental: rental %>
         </div>
+        <%= link_to "Ajouter un commentaire", new_pool_review_path(rental) %>
       </div>
     <% end %>
 </div>
