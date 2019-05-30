@@ -22,6 +22,8 @@ gem 'devise'
 gem 'mapbox-gl-rails'
 gem 'geocoder'
 gem 'typed', '~> 0.3.0'
+gem "algoliasearch-rails"
+gem 'gmaps4rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
