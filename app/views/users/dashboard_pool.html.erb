@@ -3,20 +3,28 @@
 <%= render 'shared/tabs', active: 1 %>
 
 <div class="container dashboard-pool">
-    <% @user_pools.each do |pool| %>
-      <div class="mes-piscines">
-        <div class="cards-product-dash">
-        <%= render 'shared/dashcards_pool', pool: pool %>
-        </div>
-        <div class="button-dash">
-          <%= link_to "Editer", edit_pool_path(pool), class: "btn btn-light" %>
-          <%= link_to 'Supprimer', pool, class: "btn btn-light",  method: :delete, data: { confirm: 'Are you sure?' } %>
-          <%= link_to "Ajouter un commentaire", new_pool_review_path(pool) %>
-        </div>
-
-        </div>
+  <% @user_pools.each do |pool| %>
+    <div class="mes-piscines">
+      <div class="cards-product-dash">
+      <%= render 'shared/dashcards_pool', pool: pool %>
       </div>
-    <% end %>
+      <div class="button-dash">
+        <%= link_to "Editer", edit_pool_path(pool), class: "btn btn-light" %>
+        <%= link_to 'Supprimer', pool, class: "btn btn-light",  method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to "Ajouter un commentaire", new_pool_review_path(pool) %>
+      </div>
+    </div>
+    <div class="cards-product-dash">
+      <% pool.rentals.each do |rental| %>
+        <%= rental.user.avatar %>
+        <%= rental.user.first_name %>
+        <%= rental.user.last_name %>
+        <%= rental.date %>
+        <%= rental.user_number %>
+
+      <% end %>
+    </div>
+  <% end %>
 </div>
 
 
