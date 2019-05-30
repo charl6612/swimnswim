@@ -11,6 +11,9 @@
         <div class="button-dash">
           <%= link_to "Editer", edit_pool_path(pool), class: "btn btn-light" %>
           <%= link_to 'Supprimer', pool, class: "btn btn-light",  method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to "Ajouter un commentaire", new_pool_review_path(pool) %>
+        </div>
+
         </div>
       </div>
     <% end %>

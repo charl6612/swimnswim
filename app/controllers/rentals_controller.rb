@@ -1,6 +1,6 @@
 class RentalsController < ApplicationController
   def new
-    @pool = Pool.find(params[:pool_id])
+    # @pool = Pool.find(params[:pool_id])
     @rental = Rental.new
     authorize @rental
   end
