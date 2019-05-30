@@ -1,6 +1,6 @@
 <div class="card-body bg-white my-3">
   <div class="reviews">
-    <img src="https://cdn4.iconfinder.com/data/icons/user-avatar-flat-icons/512/User_Avatar-04-512.png" class="card-pool-user avatar-bordered">
+  <%= cl_image_tag review.user.avatar, class: "avatar-bordered", alt: "avatar" %>
     <div class="creation-info">
       <h5> <%= review.user.first_name %></h5>
       <h6 class="card-subtitle mb-2 text-muted"><%= review.created_at %></h6>
