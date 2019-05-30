@@ -4,25 +4,31 @@
 
 <div class="container dashboard-pool">
   <% @user_pools.each do |pool| %>
-  <div class="mes-piscines">
-    <div class="cards-product-dash">
-    <%= render 'shared/dashcards_pool', pool: pool %>
-    </div>
-    <div class="button-dash">
-      <div class="button-d-s">
-      <%= link_to '', edit_pool_path(pool), class: "btn btn-light fas fa-pencil-alt" %>
-      <%= link_to '', pool, class: "btn btn-light far fa-trash-alt",  method: :delete, data: { confirm: 'Are you sure?' } %>
+    <div class="mes-piscines">
+      <div class="cards-product-dash">
+        <%= render 'shared/dashcards_pool', pool: pool %>
       </div>
-      <div class="button-resa">
-        <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          Voir réservations
-        </button>
+      <div class="button-dash">
+        <div class="button-d-s">
+          <%= link_to '', edit_pool_path(pool), class: "btn btn-light fas fa-pencil-alt" %>
+          <%= link_to '', pool, class: "btn btn-light far fa-trash-alt",  method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+        <div class="button-resa">
+          <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseExample-<%= pool.id %>" aria-expanded="false" aria-controls="collapseExample">
+            Voir réservations
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="collapse" id="collapseExample">
-      <% pool.rentals.each do |rental| %>
-        <div class="card card-body">
+    <div class="collapse" id="collapseExample-<%= pool.id %>">
+      <% array = pool.rentals %>
+      <% if array.empty? %>
+        <div>
+          <p>rien du tout</p>
+        </div>
+      <% else %>
+        <% array.each do |rental| %>
+          <div class="card card-body">
             <div class="avatar-rental">
               <%=cl_image_tag rental.user.avatar, class: "avatar-bordered", alt: "avatar" %>
             </div>
@@ -35,11 +41,12 @@
             </div>
           </div>
         <% end %>
+      <% end %>
     </div>
-</div>
-
   <% end %>
 </div>
+
+
 
 
 
