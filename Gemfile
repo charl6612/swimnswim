@@ -21,6 +21,7 @@ gem 'carrierwave', '~> 1.2'
 gem 'devise'
 gem 'mapbox-gl-rails'
 gem 'geocoder'
+gem 'typed', '~> 0.3.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

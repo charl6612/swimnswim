@@ -1,12 +1,10 @@
-<div class="form-group home">
-      <div class="form-group <%= current_page?(root_path) ? "home" : "defaut" %>">
-
-        <%= form_tag pools_path, method: :get do %>
+    
+    <div class="form-group <%= current_page?(root_path) ? "home" : "defaut" %>">
+      <%= form_tag pools_path, method: :get do %>
           <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Ville"
-        %>
+      params[:query],
+      class: "form-control",
+      id: "banner-typed-text"
+      %>
         <% end %>
-      </div>
-  </div>
+    </div>
