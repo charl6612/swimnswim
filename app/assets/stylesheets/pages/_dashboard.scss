@@ -2,6 +2,7 @@
   display:flex;
   position:relative;
   background-color: #dadddf;
+  margin: 10px;
 }
 
 .cards-product-dash{
@@ -41,5 +42,10 @@
   padding:0;
   border: none;
   margin: 5px;
+}
 
+.button-comment .btn{
+  position:relative;
+  top: 50%;
+  right: 10px;
 }
