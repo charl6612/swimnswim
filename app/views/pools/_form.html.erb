@@ -1,23 +1,30 @@
-  <div class="container" >
+  <div class="container-form-pool" >
+
+  <div class="text-header">
+    <p>Ajouter une piscine</p>
+  </div>
+
   <%= simple_form_for [pool] do |f| %>
+  <div class="form-inputs">
     <%= f.error_notification %>
-    <%= f.input :name, class:"form-control", id:"name", placeholder:"Nom" %>
-    <%= f.input :address, class:"form-control", id:"name", placeholder:"Adresse" %>
+    <%= f.input :name, label: "Nom de la piscine", class:"form-control", id:"name", placeholder:"Nom" %>
+    <%= f.input :address, label: "Adresse", class:"form-control", id:"name", placeholder:"Adresse" %>
     <%= f.input :description, class:"form-control", id:"name", placeholder:"Petite description" %>
-    <%= f.input :price_per_day, class:"form-control", placeholder:"Le prix par jour en €" %>
-    <%= f.input :capacity, class:"form-control", placeholder:"Nombre de personnes max"%>
-    <%= f.input :picture, as: :file %>
+    <%= f.input :price_per_day, label: "Prix par jour",class:"form-control", placeholder:"Le prix par jour en €" %>
+    <%= f.input :capacity, label: "Capacité", class:"form-control", placeholder:"Nombre de personnes max"%>
+    <%= f.input :picture, label: "Photo 1", as: :file %>
     <%= f.input :picture_cache, as: :hidden %>
-    <%= f.input :picture1, as: :file %>
+    <%= f.input :picture1, label: "Photo 2", as: :file %>
     <%= f.input :picture1_cache, as: :hidden %>
-    <%= f.input :picture2, as: :file %>
+    <%= f.input :picture2, label: "Photo 3", as: :file %>
     <%= f.input :picture2_cache, as: :hidden %>
+  </div>
 
     <% if pool.id.nil? %>
-        <%= f.submit "Ajouter une piscine", class: "btn btn-primary" %>
+        <%= f.submit "Ajouter une piscine", class: "btn piscine-btn log-in-btn" %>
     <% else %>
-      <%= f.submit "Modifier la piscine", class: "btn btn-primary" %>
+      <%= f.submit "Modifier la piscine", class: "btn piscine-btn log-in-btn" %>
       <% end %>
-    <%= link_to "Retour liste", pools_path, class: "btn btn-secondary" %>
+    <%= link_to "Retour liste", pools_path, class: "btn sign-up-btn sign-up-txt" %>
   <% end %>
 </div>
