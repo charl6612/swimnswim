@@ -3,13 +3,18 @@
 <%= render 'shared/tabs', active: 2 %>
 
 <div class="container dashboard-pool">
-    <% @user_rentals.each do |rental| %>
-      <div class="mes-piscines">
-        <div class="cards-product-dash">
-        <%= render 'shared/dashcards_rental', rental: rental %>
-        </div>
+  <% @user_rentals.each do |rental| %>
+  <div class="mes-piscines">
+    <div class="cards-product-dash">
+      <%= render 'shared/dashcards_rental', rental: rental %>
+    </div>
+    <div class="button-dash">
+      <div class="button-resa">
+        <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><%= link_to " Ajouter un commentaire", new_pool_review_path(rental), class: "btn btn-light fas fa-plus"  %>
+        </button>
       </div>
-    <% end %>
+    </div>
+  </div>
+  <% end %>
 </div>
-
 

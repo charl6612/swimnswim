@@ -3,20 +3,44 @@
 <%= render 'shared/tabs', active: 1 %>
 
 <div class="container dashboard-pool">
-    <% @user_pools.each do |pool| %>
-      <div class="mes-piscines">
-        <div class="cards-product-dash">
-        <%= render 'shared/dashcards_pool', pool: pool %>
-        </div>
-        <div class="button-dash">
-          <%= link_to "Editer", edit_pool_path(pool), class: "btn btn-light" %>
-          <%= link_to 'Supprimer', pool, class: "btn btn-light",  method: :delete, data: { confirm: 'Are you sure?' } %>
-          <%= link_to "Ajouter un commentaire", new_pool_review_path(pool) %>
-        </div>
-
-        </div>
+  <% @user_pools.each do |pool| %>
+  <div class="mes-piscines">
+    <div class="cards-product-dash">
+    <%= render 'shared/dashcards_pool', pool: pool %>
+    </div>
+    <div class="button-dash">
+      <div class="button-d-s">
+      <%= link_to '', edit_pool_path(pool), class: "btn btn-light fas fa-pencil-alt" %>
+      <%= link_to '', pool, class: "btn btn-light far fa-trash-alt",  method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
-    <% end %>
+      <div class="button-resa">
+        <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Voir réservations
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="collapse" id="collapseExample">
+      <% pool.rentals.each do |rental| %>
+        <div class="card card-body">
+            <div class="avatar-rental">
+              <%=cl_image_tag rental.user.avatar, class: "avatar-bordered", alt: "avatar" %>
+            </div>
+            <div class="description-loueur">
+              <p>Loueur : <%= rental.user.first_name %> <%= rental.user.last_name %></p>
+            </div>
+            <div class="location">
+              <p>Date : <%= rental.date %></p>
+              <p>Nombre de personnes : <%= rental.user_number %></p>
+            </div>
+          </div>
+        <% end %>
+    </div>
 </div>
+
+  <% end %>
+</div>
+
+
 
 

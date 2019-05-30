@@ -1,19 +1,51 @@
 .mes-piscines{
   display:flex;
   position:relative;
+  background-color: #dadddf;
+  margin: 10px;
 }
 
 .cards-product-dash{
   flex-grow: 1;
 }
-
-.button-dash{
+.button-d-s{
   position:absolute;
-  top: 50%;
-  right : 10px;
+  top: 10px;
+  right : 5px;
+}
+
+.button-resa{
+  position:absolute;
+  bottom: 10px;
+  right : 5px;
+}
+.button-dash{
+  color: #999999;
+  font-size: 10px;
+  transition: ease .3s;
 }
 
 .container.dashboard-pool{
   width: 50%;
   margin-top: 30px;
+  padding:0;
+}
+.button-dash:hover {
+  color: #555555;
+}
+
+.card.card-body{
+  padding:0;
+  border-radius: 5px;
+  display:flex;
+  justify-content: space-around;
+  padding:0;
+  border: none;
+  margin: 5px;
+}
+
+.button-comment .btn{
+  position:relative;
+  top: 50%;
+  right: 10px;
 }
