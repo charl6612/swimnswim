@@ -3,14 +3,15 @@
 
 <div class="container">
   <h4><%= @pools.count %> piscines correspondent à votre recherche !</h4>
+  <%= render 'shared/search' %>
 </div>
 <div class="index-split">
-  <div class="cards">
-    <% @pools.each do |pool| %>
-    <%= render 'shared/poolcard', pool: pool %>
-    <% end %>
-  </div>
-  <div class="index-map">
-    <%= render 'shared/map'%>
-  </div>
+    <div class="cards">
+        <% @pools.each do |pool| %>
+        <%= render 'shared/poolcard', pool: pool %>
+        <% end %>
+    </div>
+        <div class="index-map">
+        <%= render 'shared/map'%>
+    </div>
 </div>

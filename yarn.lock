@@ -781,6 +781,13 @@
   resolved "https://registry.yarnpkg.com/@mapbox/whoots-js/-/whoots-js-3.1.0.tgz#497c67a1cef50d1a2459ba60f315e448d2ad87fe"
   integrity sha512-Es6WcD0nO5l+2BOQS4uLfNPYQaNDfbot3X1XUoloz+x0mPDS3eeORZJl06HXjwBG1fOGwCRnzK88LMdxKRrd6Q==
 
+"@polymer/lit-element@^0.6.1":
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/@polymer/lit-element/-/lit-element-0.6.5.tgz#c614b9638a0809883ba52bf43fca5b6ed51b7aa8"
+  integrity sha512-KVjuU/5Ugp6PFob6YEe1/B4GCKjqhEy9Tj954shL6d3DohT2sNAmbX9QfbXvcZ8RhbVELK6dzbN3i2BRA3mOKg==
+  dependencies:
+    lit-html "^1.0.0-rc.1"
+
 "@rails/webpacker@^4.0.2":
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@rails/webpacker/-/webpacker-4.0.2.tgz#2c2e96527500b060a84159098449ddb1615c65e8"
@@ -4152,6 +4159,11 @@ lcid@^2.0.0:
   dependencies:
     invert-kv "^2.0.0"
 
+lit-html@^1.0.0-rc.1:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-1.1.0.tgz#6951fb717fb48fe34d915ae163448a04da321562"
+  integrity sha512-ZDJHpJi09yknMpjwPI8fuSl5sUG7+pF+eE5WciFtgyX7zebvgMDBgSLq4knXa7grxM00RkQ7PBd7UZQiruA78Q==
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -7357,6 +7369,11 @@ type-is@~1.6.17, type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
+typed.js@^2.0.10, typed.js@^2.0.9:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.0.10.tgz#70a1c1ad11965923bc9e52f851d1891b0ca1316f"
+  integrity sha512-tpK+LRm5FM2GAIWWWogbOc4QRlctS425Ef1PCQKbj/G9wyig+Zt+20eLruK7CBPR+DEl/ou4uSfpwRETCSmk4A==
+
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
@@ -7587,6 +7604,14 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   integrity sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==
   dependencies:
     minimalistic-assert "^1.0.0"
+
+wc-typed-js@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/wc-typed-js/-/wc-typed-js-1.0.1.tgz#b0a6055a974fad765e6380f9eee60185cde774fb"
+  integrity sha512-O2dDdZ2ILTWu5Y1BRHpkHDa8QuWs8TbMk6d5/k4G2SGRMlhz/HADAFVo86TGpZd9F2LpNlCC9suH7XSUUPGp5g==
+  dependencies:
+    "@polymer/lit-element" "^0.6.1"
+    typed.js "^2.0.9"
 
 webpack-assets-manifest@^3.1.1:
   version "3.1.1"

@@ -1,8 +1,9 @@
-<div class="banner">
-
-  <div class="container">
-    <h1>Des piscines d'exception à louer partout dans le monde !</h1>
-    <%= render 'shared/search' %>
+    <div class="banner">
+      <div class="container">
+        <h1>Des piscines d'exception à louer partout dans le monde !</h1>
+                <% if user_signed_in? %>
+          <h2>Hello <%= current_user.first_name.capitalize%></h2>
+        <% end %>
+        <%= render 'shared/search' %>
+      </div>
     </div>
-
-</div>
