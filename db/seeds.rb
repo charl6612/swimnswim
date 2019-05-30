@@ -39,7 +39,7 @@ puts 'Creating users...'
 puts 'Creating pools...'
 
 User.all.each do |u|
-  2.times do 
+  2.times do
     pool = Pool.new(
       name: Faker::Restaurant.name,
       address: ["9 rue du chemin vert, 59960 Neuville en ferrain", "124 avenue Becquart, 59130 Lambersart", "124 rue de Roubaix, Mouvaux", "14 rue albert bailly Marcq en baroeul"].sample,
