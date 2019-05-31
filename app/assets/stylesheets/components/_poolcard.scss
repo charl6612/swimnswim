@@ -17,7 +17,7 @@ a {
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 300px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 5px;
   height: 300px;
   &:hover{
@@ -52,6 +52,7 @@ a {
   display: grid;
   grid-gap: 16px;
   flex-grow: 1;
+  margin-left: 10px;
 }
 
 .card-pool-infos {
