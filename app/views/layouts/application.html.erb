@@ -8,7 +8,11 @@
         <%= csrf_meta_tags %>
         <%= action_cable_meta_tag %>
         <%= stylesheet_link_tag 'application', media: 'all' %>
-        <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+        <%
+=begin%>
+ <%= stylesheet_pack_tag 'application', media: 'all' %>  
+<%
+=end%>
         <%= favicon_link_tag asset_path('iconmonstr-drop-7-240.png'), :rel => 'icon', :type =>  'image/png' %>
       </head>
       <body>
