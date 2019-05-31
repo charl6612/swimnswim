@@ -1,7 +1,6 @@
 .mes-piscines{
   display:flex;
   position:relative;
-  background-color: #dadddf;
   margin: 10px;
 }
 
@@ -35,17 +34,27 @@
 }
 
 .card.card-body{
-  padding:0;
-  border-radius: 5px;
-  display:flex;
-  justify-content: space-around;
-  padding:0;
-  border: none;
-  margin: 5px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding:20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 2px;
+  margin: 15px;
+  border: 0.5px solid #bcbcba;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background-color: #F4F4F4;
+
 }
 
 .button-comment .btn{
   position:relative;
   top: 50%;
   right: 10px;
+}
+.avatar-bordered-rental{
+  width: 80px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
