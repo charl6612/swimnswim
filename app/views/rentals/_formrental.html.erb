@@ -1,6 +1,6 @@
-<%= simple_form_for [@pool, @rental] do |f| %>
+<%= simple_form_for [pool, rental] do |f| %>
   <%= f.input :date %>
   <%= f.input :comment %>
   <%= f.input :user_number %>
-  <%= link_to "Demande de réservation", new_pool_rental_path(@pool), class: 'btn btn-primary'  %>
+  <%= f.submit "Demande de réservation", class: 'btn btn-primary'  %>
 <% end %>

@@ -12,7 +12,7 @@ class RentalsController < ApplicationController
     @pool = @rental.pool
     @rental.user = current_user
     if @rental.save
-      redirect_to pool_path(@rental.pool)
+      redirect_to users_dashboard_rental_path
     else
       raise
       render :new
@@ -24,5 +24,4 @@ class RentalsController < ApplicationController
   def rental_params
     params.require(:rental).permit(:date, :comment, :user_number, :pool_id)
   end
-
 end

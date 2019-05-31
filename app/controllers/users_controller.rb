@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   def dashboard_pool
-    @user_pools = Pool.find(current_user.pool_ids)
+    @user_pools = Pool.find(current_user.pool_ids).reverse
     authorize @current_user
   end
 
   def dashboard_rental
-    @user_rentals = Rental.find(current_user.rental_ids)
+    @user_rentals = Rental.find(current_user.rental_ids).reverse
     authorize @current_user
   end
 
