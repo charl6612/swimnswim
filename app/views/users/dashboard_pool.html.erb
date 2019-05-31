@@ -24,13 +24,13 @@
       <% array = pool.rentals %>
       <% if array.empty? %>
         <div>
-          <p>rien du tout</p>
+          <p>Nothing yet</p>
         </div>
       <% else %>
         <% array.each do |rental| %>
           <div class="card card-body">
             <div class="avatar-rental">
-              <%=cl_image_tag rental.user.avatar, width: 40, height: 40, crop: :thumb, class: "avatar-bordered", alt: "avatar" %>
+              <%=cl_image_tag rental.user.avatar, width: 40, height: 40, crop: :thumb, class: "avatar-bordered-rental", alt: "avatar" %>
             </div>
             <div class="description-loueur">
               <p>Loueur : <%= rental.user.first_name %> <%= rental.user.last_name %></p>

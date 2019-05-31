@@ -1,6 +1,6 @@
 function autocomplete() {
   document.addEventListener("DOMContentLoaded", function() {
-    var Poolinput = document.getElementById('address-input');
+    var Poolinput = document.getElementById('pool_address');
 
     if (Poolinput) {
       var autocomplete = new google.maps.places.Autocomplete(Poolinput, { types: [ 'geocode' ] });
