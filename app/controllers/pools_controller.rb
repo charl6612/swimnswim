@@ -1,15 +1,15 @@
 class PoolsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
-    
+
   def index
     if params[:query].present?
-      @pools = policy_scope(Pool.near("%#{params[:query]}%", 10)) 
+      @pools = policy_scope(Pool.near("%#{params[:query]}%", 10))
       if @pools.empty?
         @pools = policy_scope(Pool)
       else
         @pools = policy_scope(Pool.near("%#{params[:query]}%", 10))
      end
-    end
+  end
 
     @markers = @pools.where.not(latitude: nil, longitude: nil).map do |pool|
       {

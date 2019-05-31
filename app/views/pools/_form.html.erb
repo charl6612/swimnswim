@@ -1,7 +1,11 @@
   <div class="container-form-pool" >
 
   <div class="text-header">
-    <p>Ajouter une piscine</p>
+    <% if pool.id.nil? %>
+      <p>Ajouter une piscine</p>
+    <% else %>
+      <p>Modifier ma piscine</p>
+    <% end %>
   </div>
 
   <%= simple_form_for [pool] do |f| %>

@@ -1,8 +1,8 @@
 <div
   class="navbar navbar-lewagon-defaut navbar-expand-sm sticky-top <%= current_page?(root_path) ? "navbar-dark" : "navbar-light" %>">
   <%= link_to root_path, class: "navbar-brand" do %>
-  <i class="fas fa-tint" style="color:#3FA8F2"></i>
-  <% end %>
+    <i class="fas fa-tint" style="color:#3FA8F2"></i>
+    <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +18,7 @@
         <%= link_to "Ajouter une piscine", new_pool_path, class: "nav-link mr-3 btn-add-pool" %>
       </li>
       <li class="nav-item dropdown">
-        <%= cl_image_tag current_user.avatar, class: "avatar-bordered", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <%= cl_image_tag current_user.avatar, width: 40, height: 40, crop: :thumb, class: "avatar-bordered", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         <%= link_to "Mon profil", users_edit_path, class: "dropdown-item" %>
         <%= link_to "Mon dashboard", users_dashboard_pool_path, class: "dropdown-item" %>
