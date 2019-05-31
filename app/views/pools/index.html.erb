@@ -1,17 +1,23 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/flashes' %>
 
-<div class="container">
-  <h4><%= @pools.length %> piscines correspondent à votre recherche !</h4>
-  <%= render 'shared/search' %>
+<div class="container-pool">
+  <div class="before-cards">
+    <div class="index-pool">
+      <h4><%= @pools.length %> piscines correspondent à votre recherche !</h4>
+    </div>
+    <div class="search-bar">
+      <%= render 'shared/search' %>
+    </div>
+  </div>
 </div>
 <div class="index-split">
-    <div class="cards">
-        <% @pools.each do |pool| %>
-        <%= render 'shared/poolcard', pool: pool %>
-        <% end %>
-    </div>
-        <div class="index-map">
-        <%= render 'shared/map'%>
-    </div>
+  <div class="cards">
+    <% @pools.each do |pool| %>
+    <%= render 'shared/poolcard', pool: pool %>
+    <% end %>
+  </div>
+  <div class="index-map">
+    <%= render 'shared/map'%>
+  </div>
 </div>
