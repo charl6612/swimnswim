@@ -1,7 +1,14 @@
 <%= simple_form_for [@pool, @rental] do |f| %>
-  <%= f.input :date, label: "Date"%>
-  <%= f.input :comment, label: "Commentaire" %>
-  <%= f.input :user_number, label: "Nombre de personnes" %>
+<div d-flex align-items-end flex-column>
+  <h4><span id="day_price"><%= @pool.price_per_day %></span>€ / jour</h4>
+</div>
+<%= f.input :date_arrivee,as: :date, html5: true, label: "Date d'arrivée", id:"date_arrivee"%>
+<%= f.input :date_depart,as: :date, html5: true, label: "Date de départ", id:"date_depart"%>
+<%= f.input :comment, label: "Commentaire" %>
+<%= f.input :user_number, label: "Nombre de personnes" %>
+<div>
+  <h4 id="prix-total"></h4>
+</div>
   <div class="form-actions">
     <%= f.button :submit, "Demande de réservation", class: "log-in-btn" %>
    </div>
