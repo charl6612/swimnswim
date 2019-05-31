@@ -22,8 +22,7 @@ module.exports = function (api) {
         {
           targets: {
             node: 'current'
-          },
-          corejs: '2',
+          }
         }
       ],
       (isProductionEnv || isDevelopmentEnv) && [
@@ -31,6 +30,7 @@ module.exports = function (api) {
         {
           forceAllTransforms: true,
           useBuiltIns: 'entry',
+          corejs: '2',
           modules: false,
           exclude: ['transform-typeof-symbol']
         }
