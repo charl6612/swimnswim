@@ -18,3 +18,19 @@
     "webpack-dev-server": "^3.4.1"
   }
 }
+
+{
+  "presets": [
+    "@babel/preset-flow",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "8.10"
+        },
+        "corejs": "2", // <---
+        "useBuiltIns": "usage"
+      }
+    ]
+  ]
+}
