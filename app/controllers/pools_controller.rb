@@ -9,7 +9,6 @@ class PoolsController < ApplicationController
       else
         @pools = policy_scope(Pool.near("%#{params[:query]}%", 10))
      end
-  end
     else
       @pools = policy_scope(Pool)
     end
