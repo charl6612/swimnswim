@@ -9,6 +9,8 @@ class PoolsController < ApplicationController
       else
         @pools = policy_scope(Pool.near("%#{params[:query]}%", 10))
      end
+    else
+      @pools = policy_scope(Pool)
     end
 
     @markers = @pools.where.not(latitude: nil, longitude: nil).map do |pool|
