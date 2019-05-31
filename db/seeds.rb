@@ -57,7 +57,7 @@ end
 puts 'Creating rentals...'
 3.times do
 Rental.create!(
-  date: Faker::Date.forward(150),
+  date_arrivee: Faker::Date.forward(150),
   comment: Faker::Verb.past,
   pool: Pool.find(Pool.ids.sample),
   user: User.find(User.ids.sample),
