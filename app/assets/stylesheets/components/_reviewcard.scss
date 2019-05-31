@@ -3,11 +3,17 @@
   display: flex;
   align-items: center;
   padding: 10px;
-  border-color: $gray;
+}
+
+.review-container{
+  margin: 10px;
+  background-color: white;
+  align-items: center;
+  padding: 10px;
 }
 
 .creation-info {
-  margin-left: 10px;
+  margin-left: 20px;
   padding: 0;
 }
 .reviews h6 {
@@ -19,10 +25,35 @@ font-size: 15px;
 }
 
 .description {
-padding: 10px;
+padding: 0;
 }
 
 .description p {
 font-size: 14px;
 background-color: white;
+}
+
+.review-header {
+  border-bottom: 0.5px solid #bcbcba;
+  padding-bottom: 10px;
+  font-size: 22px;
+  color: rgb(63, 168, 242);
+}
+
+.stars {
+  font-size: 11px;
+  padding-bottom: 5px;
+
+}
+
+.reviews h5 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.avatar-bordered-review {
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
 }

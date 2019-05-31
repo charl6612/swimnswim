@@ -23,11 +23,14 @@
           <p class="card-text">
             <%= @pool.description %></p>
         </div>
-        <div>
+
+          <div class="card-body bg-white">
+            <h5 class="review-header">Commentaires</h5>
             <% @reviews.each do |review| %>
-              <%= render 'shared/reviewcard', review: review%>
+            <%= render 'shared/reviewcard', review: review%>
             <% end %>
-        </div>
+          </div>
+
       </div>
       <div class="col-sm-12 col-md-5 text-justify">
         <div class="card-body">
