@@ -22,6 +22,6 @@ class RentalsController < ApplicationController
   private
 
   def rental_params
-    params.require(:rental).permit(:date, :comment, :user_number, :pool_id)
+    params.require(:rental).permit(:date_depart, :date_arrivee, :comment, :user_number, :pool_id)
   end
 end
