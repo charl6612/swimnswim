@@ -1,7 +1,19 @@
-<div class="container">
+<div class="container-form">
+
+  <div class="text-header">
+      <p>Ajouter un commentaire</p>
+  </div>
+
+  <div class="form-inputs">
   <%= simple_form_for [@pool, @review] do |f| %>
-    <%= f.input :description %>
-    <%= f.input :rating, collection: (0..5) %>
-    <%= f.submit "Ajouter un commentaire", class: "btn btn-primary" %>
+    <%= f.input :description, label: "Votre commentaire", class:"form-control", placeholder: "Dites aux autres utilisateurs ce que vous avez pensé de cette piscine."%>
+    <%= f.input :rating, label: "Votre note", class:"form-control", collection: (0..5) %>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Ajouter un commentaire", class: "log-in-btn" %>
+    </div>
+
   <% end %>
+
+  </div>
 </div>

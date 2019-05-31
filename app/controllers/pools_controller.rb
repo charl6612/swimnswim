@@ -1,9 +1,9 @@
 class PoolsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
-    
+
   def index
     if params[:query].present?
-      @pools = policy_scope(Pool.near("%#{params[:query]}%", 10)) 
+      @pools = policy_scope(Pool.near("%#{params[:query]}%", 10))
       if @pools.empty?
         @pools = policy_scope(Pool)
       else
@@ -20,7 +20,6 @@ class PoolsController < ApplicationController
         infoWindow: render_to_string(partial: "shared/infowindow", locals: { pool: pool }),
       }
     end
-
   end
 
   def show
@@ -56,14 +55,14 @@ class PoolsController < ApplicationController
     @pool = Pool.find(params[:id])
     authorize @pool
     @pool.update(pool_params)
-    redirect_to pool_path(@pool)
+    redirect_to users_dashboard_pool_path
   end
 
   def destroy
     @pool = Pool.find(params[:id])
     authorize @pool
     @pool.destroy
-    redirect_to pools_path
+    redirect_to users_dashboard_pool_path
   end
 
   def pool_params

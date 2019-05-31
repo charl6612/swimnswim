@@ -1,6 +1,6 @@
 <div class="card-body bg-white my-3">
   <div class="reviews">
-  <%= cl_image_tag review.user.avatar, class: "avatar-bordered", alt: "avatar" %>
+  <%= cl_image_tag review.user.avatar, width: 40, height: 40, crop: :thumb, class: "avatar-bordered", alt: "avatar" %>
     <div class="creation-info">
       <h5> <%= review.user.first_name %></h5>
       <h6 class="card-subtitle mb-2 text-muted"><%= review.created_at %></h6>

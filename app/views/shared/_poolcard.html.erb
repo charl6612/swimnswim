@@ -6,7 +6,7 @@
       <h2><%= pool.name %></h2>
       <p><%=pool.address%></p>
     </div>
-    <%= cl_image_tag pool.user.avatar, class: "card-pool-user avatar-bordered", alt: "avatar" %>
+    <%= cl_image_tag pool.user.avatar, width: 40, height: 40, crop: :thumb, class: "card-pool-user avatar-bordered", alt: "avatar" %>
     <h2 class="card-trip-pricing"><%=pool.price_per_day%>€/jour</h2>
   </div>
 </div>
