@@ -9,7 +9,7 @@ if (arrivee) {
     const depart = document.getElementById("rental_date_depart");
     depart.addEventListener("input", (event) => {
       const dep = new Date(depart.value);
-      const duration = dateDiff(arr, dep).day;
+      const duration = dateDiff(arr, dep).day + 1;
       const dayprice = document.getElementById("day_price");
       priceday = dayprice.innerHTML;
       totalprice = duration * priceday;
