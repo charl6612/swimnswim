@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'users/edit'
   put 'users/update'
   resources :pools do
-    resources :rentals, only: [ :index, :new, :create ]
+    resources :rentals, only: [ :index, :new, :create]
     resources :reviews, only: [:new, :create]
   end
   resources :reviews, only: [:show]
