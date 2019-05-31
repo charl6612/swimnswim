@@ -3,8 +3,8 @@
     <%= cl_image_tag rental.pool.picture %>
     <div class="card-product-infos">
       <h2><%= rental.pool.name %></h2>
-      <p><%=rental.date_arrivee%></p>
-      <p><%=rental.date_depart%></p>
+      <p>Du : <em><%= rental.date_arrivee %></em></p>
+      <p>Au : <em><%= rental.date_depart %></em></p>
       <p><%=rental.user_number%> personnes</p>
       <p><%=rental.pool.price_per_day%>€ / jour</p>
     </div>

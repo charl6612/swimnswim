@@ -1,8 +1,11 @@
-<div class="card-body bg-white my-3">
+<div class="card-body bg-white p-0">
   <div class="reviews">
-  <%= cl_image_tag review.user.avatar, width: 40, height: 40, crop: :thumb, class: "avatar-bordered", alt: "avatar" %>
+  <%= cl_image_tag review.user.avatar, width: 50, height: 50, crop: :thumb, class: "avatar-bordered-review", alt: "avatar" %>
     <div class="creation-info">
-      <h5> <%= review.user.first_name %></h5>
+      <h5> <%= review.user.first_name.capitalize %></h5>
+      <div class="stars">
+      <%= render 'shared/stars', review: review%>
+      </div>
       <h6 class="card-subtitle mb-2 text-muted"><%= review.created_at %></h6>
     </div>
   </div>
@@ -10,4 +13,5 @@
   <div class="description">
       <p><%= review.description %></p>
   </div>
+
 </div>

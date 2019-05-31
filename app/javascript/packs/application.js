@@ -1,7 +1,5 @@
 import "bootstrap";
-
 import { loadDynamicBannerText } from '../components/banner';
-loadDynamicBannerText();
+import '../components/total_price';
 
-import {price} from '../components/total_price';
-price();
+loadDynamicBannerText();
