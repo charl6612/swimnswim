@@ -2,5 +2,8 @@
   <%= f.input :date, label: "Date"%>
   <%= f.input :comment, label: "Commentaire" %>
   <%= f.input :user_number, label: "Nombre de personnes" %>
-  <%= f.submit "Demande de réservation", class: "btn btn-primary waves-effect btn-rounded" %>
+  <div class="form-actions">
+    <%= f.button :submit, "Demande de réservation", class: "log-in-btn" %>
+   </div>
 <% end %>
+
