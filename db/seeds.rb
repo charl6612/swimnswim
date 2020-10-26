@@ -28,7 +28,7 @@ last_name: "Noppe",
 email: "charles@gmail.com",
 password: "password",
 )
-charles.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559310040/photo_dfh4bi.jpg"
+# charles.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559310040/photo_dfh4bi.jpg"
 charles.save
 
 laure = User.create!(
@@ -37,7 +37,7 @@ last_name: "Manaudou",
 email: "laure@gmail.com",
 password: "password",
 )
-laure.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559310359/que-devient-l-ancienne-nageuse-laure-manaudou_q4ym3k.jpg"
+# laure.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559310359/que-devient-l-ancienne-nageuse-laure-manaudou_q4ym3k.jpg"
 laure.save
 
 daniel = User.create!(
@@ -46,7 +46,7 @@ last_name: "Feline",
 email: "daniel@gmail.com",
 password: "password",
 )
-daniel.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312297/002ps9kexcbvsbv_ts_1456645850000_wd4r8l.jpg"
+# daniel.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312297/002ps9kexcbvsbv_ts_1456645850000_wd4r8l.jpg"
 daniel.save
 
 florent = User.create!(
@@ -55,7 +55,7 @@ last_name: "Manaudou",
 email: "florent@gmail.com",
 password: "password",
 )
-florent.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311188/11086760_p2c0ez.jpg"
+# florent.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311188/11086760_p2c0ez.jpg"
 florent.save
 
 margaux = User.create!(
@@ -64,7 +64,7 @@ margaux = User.create!(
     email: "margaux@gmail.com",
     password: "password",
   )
-margaux.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559310020/1017760_10203784845281891_1567655934386114532_n_qmtke0.jpg"
+# margaux.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559310020/1017760_10203784845281891_1567655934386114532_n_qmtke0.jpg"
 margaux.save
 
 gerard = User.create!(
@@ -73,7 +73,7 @@ gerard = User.create!(
     email: "gerard@gmail.com",
     password: "password",
   )
-gerard.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311599/gerard-depardieu-n-a-pas-ete-ravi-d-avoir-ete-apercu-par-un-journaliste-de-l-afp_l5ve5s.jpg"
+# gerard.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311599/gerard-depardieu-n-a-pas-ete-ravi-d-avoir-ete-apercu-par-un-journaliste-de-l-afp_l5ve5s.jpg"
 gerard.save
 
 jean = User.create!(
@@ -82,7 +82,7 @@ jean = User.create!(
     email: "jean@gmail.com",
     password: "password",
   )
-jean.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311524/jean-dujardin_ppacch.jpg"
+# jean.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311524/jean-dujardin_ppacch.jpg"
 jean.save
 
 aya = User.create!(
@@ -91,7 +91,7 @@ aya = User.create!(
     email: "aya@gmail.com",
     password: "password",
   )
-aya.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311524/aya-nakamura-cover-djadja-nue_5bac966a250ec_wtb1oh.jpg"
+# aya.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311524/aya-nakamura-cover-djadja-nue_5bac966a250ec_wtb1oh.jpg"
 aya.save
 
 susan = User.create!(
@@ -100,7 +100,7 @@ susan = User.create!(
     email: "susan@gmail.com",
     password: "password",
   )
-susan.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311524/_105103351_boyle_getty_yy27xl.jpg"
+# susan.remote_avatar_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311524/_105103351_boyle_getty_yy27xl.jpg"
 susan.save
 
 
@@ -114,9 +114,9 @@ pool = Pool.new(
   capacity: 5,
   user: charles,
 )
-pool.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559308260/rkdr6y3w7qbpupude7np.jpg"
-pool.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559308261/inzzf9q0o0rwdyuhv1ol.jpg"
-pool.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559308263/f57zjpcjo66nxxju0nht.jpg"
+# pool.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559308260/rkdr6y3w7qbpupude7np.jpg"
+# pool.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559308261/inzzf9q0o0rwdyuhv1ol.jpg"
+# pool.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559308263/f57zjpcjo66nxxju0nht.jpg"
 pool.save
 
 poola = Pool.new(
@@ -128,9 +128,9 @@ poola = Pool.new(
   capacity: 9,
   user: laure,
 )
-poola.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312655/fffff_c3s9ss.jpg"
-poola.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559310154/3_chzkra.jpg"
-poola.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559310154/1_xutmpv.jpg"
+# poola.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312655/fffff_c3s9ss.jpg"
+# poola.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559310154/3_chzkra.jpg"
+# poola.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559310154/1_xutmpv.jpg"
 poola.save
 
 poolb = Pool.new(
@@ -144,9 +144,9 @@ poolb = Pool.new(
   capacity: 10,
   user: florent,
 )
-poolb.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311149/c_guvm7x.jpg"
-poolb.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311149/b_thxyix.jpg"
-poolb.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311149/a_u3cbnl.jpg"
+# poolb.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311149/c_guvm7x.jpg"
+# poolb.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311149/b_thxyix.jpg"
+# poolb.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311149/a_u3cbnl.jpg"
 poolb.save
 
 pool1 = Pool.create!(
@@ -159,9 +159,9 @@ Possibilité de se garer facilement devant la maison.",
   capacity: 5,
   user: margaux,
   )
-pool1.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559305119/uagoy7lktmiqdp3yv01y.jpg"
-pool1.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559305166/w8fcd4b5hrw8uhumrybg.jpg"
-pool1.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559309486/daniel-ghio-454933-unsplash_bmgot5.jpg"
+# pool1.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559305119/uagoy7lktmiqdp3yv01y.jpg"
+# pool1.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559305166/w8fcd4b5hrw8uhumrybg.jpg"
+# pool1.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559309486/daniel-ghio-454933-unsplash_bmgot5.jpg"
 pool1.save
 
 pool2 = Pool.create!(
@@ -181,9 +181,9 @@ Vous pourrez aussi déjeuner sur place si vous le souhaitez !",
   capacity: 15,
   user: jean,
   )
-pool2.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559309517/jesse-gardner-433598-unsplash_bmvryc.jpg"
-pool2.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559308263/f57zjpcjo66nxxju0nht.jpg"
-pool2.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559305169/akklsyhpmiy2meqhza98.jpg"
+# pool2.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559309517/jesse-gardner-433598-unsplash_bmvryc.jpg"
+# pool2.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559308263/f57zjpcjo66nxxju0nht.jpg"
+# pool2.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559305169/akklsyhpmiy2meqhza98.jpg"
 pool2.save
 
 pool3 = Pool.create!(
@@ -200,9 +200,9 @@ Le maximum de personnes pouvant être accueillies par demi-journée est de 6 per
   capacity: 6,
   user: susan,
   )
-pool3.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312077/derek-thomson-274245-unsplash_kqgzyb.jpg"
-pool3.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312076/kevin-laminto-1224865-unsplash_pmsfqn.jpg"
-pool3.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312076/gerd-schrade-1150695-unsplash_a3fs6c.jpg"
+# pool3.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312077/derek-thomson-274245-unsplash_kqgzyb.jpg"
+# pool3.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312076/kevin-laminto-1224865-unsplash_pmsfqn.jpg"
+# pool3.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312076/gerd-schrade-1150695-unsplash_a3fs6c.jpg"
 pool3.save
 
 pool4 = Pool.create!(
@@ -219,9 +219,9 @@ Nous mettrons à votre disposition​,​ des transats ainsi qu'une table avec d
   capacity: 10,
   user:aya,
   )
-pool4.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312192/humphrey-muleba-1095899-unsplash_aezhqc.jpg"
-pool4.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312192/nick-fewings-674083-unsplash_olwmoo.jpg"
-pool4.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311928/cnmb7nhv7be5rkjwfumx.jpg"
+# pool4.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312192/humphrey-muleba-1095899-unsplash_aezhqc.jpg"
+# pool4.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312192/nick-fewings-674083-unsplash_olwmoo.jpg"
+# pool4.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559311928/cnmb7nhv7be5rkjwfumx.jpg"
 pool4.save
 
 pool5 = Pool.create!(
@@ -235,9 +235,9 @@ Vous ne pourrez pas avoir accès à l'interieur de la maison puisqu'il sera ferm
   capacity: 10,
   user:gerard,
   )
-pool5.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312362/joao-mansano-1497129-unsplash_jslpot.jpg"
-pool5.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312362/grant-durr-1133571-unsplash_upwczj.jpg"
-pool5.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312362/sergi-kabrera-1245060-unsplash_1_gdxmqc.jpg"
+# pool5.remote_picture_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312362/joao-mansano-1497129-unsplash_jslpot.jpg"
+# pool5.remote_picture1_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312362/grant-durr-1133571-unsplash_upwczj.jpg"
+# pool5.remote_picture2_url = "https://res.cloudinary.com/dsp2exmo1/image/upload/v1559312362/sergi-kabrera-1245060-unsplash_1_gdxmqc.jpg"
 pool5.save
 
 puts 'Creating reviews...'
